@@ -3,8 +3,16 @@
   const increment = () => {
     count += 1
   }
+  const decrement = () => {
+    count -= 1
+  }
 </script>
+<span>count is {count}</span>
 
 <button on:click={increment}>
-  count is {count}
+  +
+</button>
+
+<button on:click={decrement}>
+-
 </button>
