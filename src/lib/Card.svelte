@@ -1,13 +1,12 @@
 <script>
-  let clicked = false
+  import {clicked} from './Stores'
   const updateClicked = () => {
-    clicked = !clicked
+    clicked.set(true)
   }
   
 </script>
+
+{#if !$clicked}
 <button on:click={updateClicked}>Begin</button>
-{clicked}
-{#if clicked}
-  <h3>hello world</h3>
 
 {/if}

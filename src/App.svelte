@@ -1,15 +1,16 @@
 <script>
   import Nav from './lib/Nav.svelte';
-  import Counter from './lib/Counter.svelte'
+  import Card from './lib/Card.svelte'
+ 
 </script>
 <Nav />
 <main>
-
+  
 
   <h2>We appreciate your feedback to help improve our services</h2>
 
   <div class="card">
-    <Counter />
+    <Card />
   </div>
 
 </main>
