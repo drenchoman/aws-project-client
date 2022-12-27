@@ -16,8 +16,8 @@
     justify-content: flex-end;
     height: 100%;
     max-height: 10vh;
-    background-color: #01023a;
-  }
+    background-color: #11cc8a;
+    }
 div{
   display: flex;
   justify-content: center;
@@ -26,5 +26,7 @@ div{
 }
 img{
      width: 50px;
+     filter: invert(15%) sepia(97%) saturate(6856%) hue-rotate(247deg) brightness(25%) contrast(110%);
+
   }
 </style>

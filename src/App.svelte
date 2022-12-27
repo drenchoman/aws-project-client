@@ -23,8 +23,7 @@
     {:else if $counter == 3}
       <Question question={'If you could change one thing about our product, what would it be?'} qnum={3} />
     {:else if $counter == 4}
-    <Goodbye message={"You've been really helpful!"} subMessage={"Thanks for your input. For any questions or feedback, please don't hesitate to contact us"} />
-   
+    <Question question="N/A" qnum={4} /> 
    {/if}
     </div>
 
@@ -44,6 +43,12 @@
 
   .card{
     max-width: 525px;
+  }
+
+  @media screen and (max-width: 420px){
+    .main{
+      height: 80vh;
+    }
   }
 
 

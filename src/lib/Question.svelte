@@ -1,6 +1,7 @@
 <script>
 import {q1, q2, q3} from './Stores'
 import { fly, fade } from 'svelte/transition';
+import Goodbye from './Goodbye.svelte';
 import Right from './Right.svelte';
 export let question
 export let qnum
@@ -51,7 +52,7 @@ const options = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   </div>
 </div>
 {:else if qnum == 3 }
-<div in:fly="{{ y: 200, duration: 2000, delay: 800 }}" out:fly="{{ y: -200, duration:800 }}" class="card">
+<div in:fly="{{ y: 200, duration: 2000, delay: 800 }}" out:fly="{{  y: -200, duration:800 }}" class="card">
     <div class="q">
       <div class='left'>
         <span>3.</span>
@@ -62,9 +63,15 @@ const options = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   <hr/>
     <Right />
     </div>
-  </div>
+    </div>
+    </div>
   
-</div>
+
+  {:else if qnum == 4}
+  <div in:fly="{{ y: 200, duration: 2000, delay: 900 }}" out:fly="{{  y: -200, duration:800 }}" class="card">
+  <Goodbye message={"You've been really helpful!"} subMessage={"Thanks for your input. For any questions or feedback, please don't hesitate to contact us"} />
+    </div>
+  
 {/if}
 
 <style>
