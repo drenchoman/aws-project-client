@@ -3,7 +3,7 @@
 </script>
 
 <nav>
-  <h1>Cotiss Feedback Form</h1>
+  <img src="https://www.cotiss.com/hubfs/Fill%2013.svg" alt="Cotiss Logo">
 </nav>
 
 
@@ -16,8 +16,8 @@
     max-height: 10vh;
   }
 
-  h1{
-    font-size: 1rem;
+  img{
     margin-right: 1rem;
+    margin-top: 1rem;
   }
 </style>
