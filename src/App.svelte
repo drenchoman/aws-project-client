@@ -1,7 +1,7 @@
 <script>
   import Nav from './lib/Nav.svelte';
   import Card from './lib/Card.svelte'
-
+  import Goodbye from './lib/Goodbye.svelte';
  import Question from './lib/Question.svelte';
  import {counter, q1, q2, q3} from './lib/Stores'
 </script>
@@ -17,21 +17,13 @@
       <Card /> 
     </div>
    {:else if $counter == 1}
-    <Question question={'How exactly are you using our product?'} qnum={1} />
+     <Question question={'How exactly are you using our product?'} qnum={1} />
     {:else if $counter == 2 }
-
-
       <Question question={'How likely are you to recommend us to a friend or colleague?'} qnum={2}/> 
-
     {:else if $counter == 3}
-    <Question question={'If you could change one thing about our product, what would it be?'} qnum={3} />
-    
+      <Question question={'If you could change one thing about our product, what would it be?'} qnum={3} />
     {:else if $counter == 4}
-    <h2>Thanks for your feedback!</h2>
-    <p>We really appreciate it</p>
-    {$q1}
-    {$q2}
-    {$q3}
+    <Goodbye message={"You've been really helpful!"} subMessage={"Thanks for your input. For any questions or feedback, please don't hesitate to contact us"} />
    
    {/if}
     </div>

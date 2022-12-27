@@ -1,13 +1,15 @@
 <script>
 import {q1, q2, q3} from './Stores'
+import { fly, fade } from 'svelte/transition';
 import Right from './Right.svelte';
 export let question
 export let qnum
 const options = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+	let visible = true;
 </script>
 
 {#if qnum == 1}
-<div class="card">
+<div in:fly="{{ y: 200, duration: 2000 }}" out:fly="{{ y: -200, duration: 800 }}" class="card">
   <div class="q">
     <div class='left'>
       <span>1.</span>
@@ -26,7 +28,7 @@ const options = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
  
 </div>
 {:else if qnum == 2}
-<div class="card">
+<div in:fly="{{ y: 200, duration: 2000, delay: 800 }}" out:fly="{{ y: -200, duration:800 }}" class="card">
   <div class="q">
     <div class='left'>
       <span>2.</span>
@@ -49,7 +51,7 @@ const options = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   </div>
 </div>
 {:else if qnum == 3 }
-  <div class="card">
+<div in:fly="{{ y: 200, duration: 2000, delay: 800 }}" out:fly="{{ y: -200, duration:800 }}" class="card">
     <div class="q">
       <div class='left'>
         <span>3.</span>
@@ -69,6 +71,7 @@ const options = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   .card{
     display: flex;
     flex-direction: column;
+    padding: 0 1rem;
   }
 .left{
   margin-top: 0.5rem;
@@ -85,7 +88,7 @@ span{
 }
 p{
   font-size: 1.3rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .right{
@@ -130,5 +133,11 @@ input[type='radio']:checked {
 
 .num > label {
   text-align: center;
+}
+
+@media screen and (max-width: 420px){
+  .left{
+    margin-right: 0.5rem;
+  }
 }
 </style>

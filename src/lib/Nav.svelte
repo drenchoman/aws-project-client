@@ -3,7 +3,9 @@
 </script>
 
 <nav>
-  <img src="https://www.cotiss.com/hubfs/Fill%2013.svg" alt="Cotiss Logo">
+  <div>
+    <img src="https://www.cotiss.com/hubfs/Fill%2013.svg" alt="Cotiss Logo">
+  </div>
 </nav>
 
 
@@ -14,10 +16,15 @@
     justify-content: flex-end;
     height: 100%;
     max-height: 10vh;
+    background-color: #01023a;
   }
-
-  img{
-    margin-right: 1rem;
-    margin-top: 1rem;
+div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+}
+img{
+     width: 50px;
   }
 </style>
