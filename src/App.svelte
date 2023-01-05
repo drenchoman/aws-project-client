@@ -13,7 +13,7 @@
     {#if $counter == 0}
     <div>
       <h2>Hey there! We'd love to learn more about how our product is helping you.</h2>
-      <p>Can you spare 3 marbles?</p>
+      <p>Can you spare 3 minutes?</p>
       <Card /> 
     </div>
    {:else if $counter == 1}
