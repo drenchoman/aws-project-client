@@ -20,13 +20,11 @@ const options = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   <p>What need is it solving? How is it helping?</p>
   <input required placeholder="Type your answer here..." name='q1' id='#q1' type="text" bind:value={$q1}>
   <hr/>
-  <Right />
+  <Right value={$q1}/>
     </div>
     
   </div>
   
-
- 
 </div>
 {:else if qnum == 2}
 <div in:fly="{{ y: 200, duration: 2000, delay: 800 }}" out:fly="{{ y: -200, duration:800 }}" class="card">
@@ -47,7 +45,7 @@ const options = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         {/each}
         </div>
       <hr/>
-      <Right />
+      <Right value={$q2} />
     </div>
   </div>
 </div>
@@ -61,7 +59,7 @@ const options = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   <label for="q3">{question}</label>
   <input required placeholder="Type your answer here..." name='q3' id='#q3' type="text" bind:value={$q3}>
   <hr/>
-    <Right />
+    <Right value ={$q3} />
     </div>
     </div>
     </div>

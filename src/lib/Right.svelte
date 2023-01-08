@@ -4,11 +4,12 @@
     counter.update(n => n + 1)
     
   }
+  export let value
 import tick from '../assets/tick.svg'
 
 </script>
 
-<button on:click={increment}>
+<button disabled={value.length == 0} on:click={increment}>
   Done
   <img src={tick} alt="Right Arrow"/>
 </button>
@@ -22,8 +23,15 @@ import tick from '../assets/tick.svg'
     justify-content: center;
     align-items: center;
     max-width: fit-content;
+    transition: 1s ease-in-out;
   }
   button > * {
     margin: 0 0.5rem;
+  }
+
+  button:disabled{
+    border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
   }
 </style>
