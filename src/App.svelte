@@ -1,14 +1,15 @@
 <script>
   import Nav from './lib/Nav.svelte';
   import Card from './lib/Card.svelte'
-  import Goodbye from './lib/Goodbye.svelte';
  import Question from './lib/Question.svelte';
- import {counter, q1, q2, q3} from './lib/Stores'
+ import {counter, q1, q2, q3, feedbackVisible} from './lib/Stores'
+import FeedbackHelp from './lib/FeedbackHelp.svelte';
+
+
 </script>
 <Nav />
 <main class='main'>
- 
-  
+
   <div class="card">
     {#if $counter == 0}
     <div>
@@ -26,6 +27,13 @@
     <Question question="N/A" qnum={4} /> 
    {/if}
     </div>
+
+  <div class="help">
+    {#if $feedbackVisible}
+    <FeedbackHelp />
+    {/if}
+
+  </div>
 
 </main>
 

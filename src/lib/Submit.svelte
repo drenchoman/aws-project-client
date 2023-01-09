@@ -1,8 +1,9 @@
 <script>
-  import {counter} from './Stores'
+  import {counter, feedbackVisible} from './Stores'
+  
   const increment = () => {
     counter.update(n => n + 1)
-    
+    feedbackVisible.set(false)
   }
   export let value
 import tick from '../assets/tick.svg'

@@ -2,7 +2,8 @@
 import {q1, q2, q3} from './Stores'
 import { fly, fade } from 'svelte/transition';
 import Goodbye from './Goodbye.svelte';
-import Right from './Right.svelte';
+import Help from './Help.svelte'
+import Submit from './Submit.svelte';
 export let question
 export let qnum
 const options = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -20,7 +21,11 @@ const options = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   <p>What need is it solving? How is it helping?</p>
   <input required placeholder="Type your answer here..." name='q1' id='#q1' type="text" bind:value={$q1}>
   <hr/>
-  <Right value={$q1}/>
+  <div class="bottom">
+    <Submit value={$q1}/>
+    <Help />
+
+  </div>
     </div>
     
   </div>
@@ -45,7 +50,11 @@ const options = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         {/each}
         </div>
       <hr/>
-      <Right value={$q2} />
+      <div class="bottom">
+        <Submit value={$q2} />
+        <Help />
+
+      </div>
     </div>
   </div>
 </div>
@@ -59,7 +68,11 @@ const options = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   <label for="q3">{question}</label>
   <input required placeholder="Type your answer here..." name='q3' id='#q3' type="text" bind:value={$q3}>
   <hr/>
-    <Right value ={$q3} />
+  <div class="bottom">
+    <Submit value ={$q3} />
+    <Help />
+
+  </div>
     </div>
     </div>
     </div>
@@ -138,6 +151,11 @@ input[type='radio']:checked {
 
 .num > label {
   text-align: center;
+}
+
+.bottom{
+  display: flex;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 420px){

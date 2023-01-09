@@ -5,3 +5,5 @@ export const q2 = writable(0);
 export const q3 = writable('');
 export const clicked = writable(false);
 export const counter = writable(0);
+export const ids = ['23456-abcd-65432', '12345-abcd-6789']
+export const feedbackVisible = writable(false)
