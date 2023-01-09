@@ -6,7 +6,7 @@
   import gif from '../assets/giphy.gif'
   import {v4 as uuidv4} from 'uuid'
   import {q1, q2, q3} from './Stores'
-  const url = `ec2-3-89-142-124.compute-1.amazonaws.com:5000/feedback`
+  const url = `https://ec2-3-89-142-124.compute-1.amazonaws.com:5000/feedback`
 
   const feedback = {
         "userid": uuidv4(),
