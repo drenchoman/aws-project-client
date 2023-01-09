@@ -3,7 +3,7 @@ import {ids, counter} from './Stores'
 const getRandomId = () => {
     return ids[Math.floor(Math.random()*DataTransferItemList.length)]
   }
-const url = `http://localhost:5000/feedback/${getRandomId()}`
+const url = `http://ec2-18-234-221-144.compute-1.amazonaws.com/${getRandomId()}`
 
 
 const getFeedback = async () => {
