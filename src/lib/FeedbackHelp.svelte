@@ -27,3 +27,13 @@ let feedbackPromise = getFeedback()
   <h2>Error while laoding the data</h2>
   {/await}
 </div>
+
+<style>
+  div{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    max-width: 525px;
+
+  }
+</style>

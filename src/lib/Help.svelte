@@ -12,7 +12,7 @@ function handleClick(){
 
 
 
-    <div on:click={handleClick} class="help">
+    <div on:keydown={handleClick} on:click={handleClick} class="help">
       <span>Need help?</span>
       <img src={q} alt="Help me" />
     </div>

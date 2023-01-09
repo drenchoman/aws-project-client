@@ -28,12 +28,12 @@ import FeedbackHelp from './lib/FeedbackHelp.svelte';
    {/if}
     </div>
 
-  <div class="help">
+  
     {#if $feedbackVisible}
     <FeedbackHelp />
     {/if}
 
-  </div>
+  
 
 </main>
 
@@ -52,7 +52,7 @@ import FeedbackHelp from './lib/FeedbackHelp.svelte';
   .card{
     max-width: 525px;
   }
-
+ 
   @media screen and (max-width: 420px){
     .main{
       height: 80vh;
