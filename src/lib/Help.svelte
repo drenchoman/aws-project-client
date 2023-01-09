@@ -1,6 +1,5 @@
 <script>
   import q from '../assets/question.svg'
-  import FeedbackHelp from './FeedbackHelp.svelte'
  import { feedbackVisible } from './Stores';
 
 function handleClick(){

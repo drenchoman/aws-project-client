@@ -1,13 +1,12 @@
 <script>
 import {q1, q2, q3} from './Stores'
-import { fly, fade } from 'svelte/transition';
+import { fly} from 'svelte/transition';
 import Goodbye from './Goodbye.svelte';
 import Help from './Help.svelte'
 import Submit from './Submit.svelte';
 export let question
 export let qnum
 const options = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-	let visible = true;
 </script>
 
 {#if qnum == 1}
