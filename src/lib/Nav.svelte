@@ -4,7 +4,9 @@
 
 <nav>
   <div>
+    <a rel="noreferrer noopener" href="https://www.cotiss.com/">
     <img src="https://www.cotiss.com/hubfs/Fill%2013.svg" alt="Cotiss Logo">
+    </a>
   </div>
 </nav>
 

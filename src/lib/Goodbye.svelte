@@ -12,7 +12,7 @@
         "userid": uuidv4(),
         "dateSubmitted": Date.now(),
         "q1": $q1,
-        "q2": $q2,
+        "q2": $q2.toString(),
         "q3": $q3
       }
  
