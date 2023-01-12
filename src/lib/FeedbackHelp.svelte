@@ -1,10 +1,10 @@
 <script>
 import {ids, counter} from './Stores'
 const getRandomId = () => {
-    return ids[Math.floor(Math.random()*DataTransferItemList.length)]
+    return ids[Math.floor(Math.random()*ids.length)]
   }
 const url = `https://aws-project.click/feedback/${getRandomId()}`
-
+// const prod = `https://localhost:5173/feedback/${getRandomId()}`
 
 const getFeedback = async () => {
   let res = await fetch(url)
@@ -24,7 +24,7 @@ let feedbackPromise = getFeedback()
     <p>{feedback}</p>
   </div>
   {:catch err}
-  <h2>Error while laoding the data</h2>
+  <h2>Error while loading the data</h2>
   {/await}
 </div>
 
