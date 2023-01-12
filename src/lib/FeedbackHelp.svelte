@@ -3,7 +3,7 @@ import {ids, counter} from './Stores'
 const getRandomId = () => {
     return ids[Math.floor(Math.random()*DataTransferItemList.length)]
   }
-const url = `https://aws-project.click/${getRandomId()}`
+const url = `https://aws-project.click/feedback/${getRandomId()}`
 
 
 const getFeedback = async () => {
