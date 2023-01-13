@@ -7,12 +7,8 @@ const url = `https://aws-project.click/feedback/${getRandomId()}`
 // const prod = `https://localhost:5173/feedback/${getRandomId()}`
 
 const getFeedback = async () => {
-  let options = {
-    headers:  {'Access-Control-Allow-Origin': '*' }
-
-    
-  }
-  let res = await fetch(url, options)
+  
+  let res = await fetch(url)
   let data = await res.json()
   let qNum = 'q' + $counter
   return data[qNum]
