@@ -51,6 +51,7 @@ import FeedbackHelp from './lib/FeedbackHelp.svelte';
 
   .card{
     max-width: 525px;
+    padding: 0 1rem;
   }
  
   @media screen and (max-width: 420px){
